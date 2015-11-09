@@ -2,6 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: 'https://torrid-inferno-6564.firebaseio.com/',
+
     modulePrefix: 'smart-forms',
     environment: environment,
     baseURL: '/',
@@ -11,6 +13,15 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'", // Allow scripts from https://cdn.mxpnl.com
+      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'connect-src': "'self' https://api.mixpanel.com http://custom-api.local", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com 
+      'media-src': "'self'"
     },
 
     APP: {
