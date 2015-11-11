@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.controller.extend({
+export default Ember.Controller.extend({
   init: function() {
     // Fire up the data
     var fields = [
