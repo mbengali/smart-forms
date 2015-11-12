@@ -27,5 +27,83 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mdl-menu__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.12); 
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  .mdl-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.mdl-button.mdl-button--accent {
+   cursor: pointer;
+   color: gray;
+   width: 100%;
+   border: 1px solid rgba(0, 0, 0, 0.12);
+   padding: 0;
+
+   &.signature {
+      height: 52px;
+      line-height: 52px;
+      background-color: @attention;
+      color: @white;
+
+      &.signed {
+        background: transparent;
+      }
+
+      .signature-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        color: @attention;
+        background-color: @white;
+      }
+
+      .signature-name {
+        height: 100%;
+      }
+
+      .signature-footer {
+        height: 100%;
+        display: none;
+        float: right;
+        background-color: @highlight;
+      }
+
+      &.signed {
+        text-transform: lowercase;
+
+        .signature-bg {
+          background-color: @highlight;
+          opacity: 0.2;
+        }
+
+        .signature-name {
+          float: left;
+          color: @highlight;
+          font-family: 'Mr Dafoe', cursive;
+          padding-left: 20px;
+        }
+        .signature-footer {
+            background-color: @highlight;
+            color: black;
+            display: block;
+            font-size: 10px;
+            padding: 0 20px 0 0;
+        }
+
+        &:hover {
+          color: default;
+          background-color: default;
+        }
+
+      }
+   }
 }
