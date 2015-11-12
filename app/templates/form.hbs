@@ -32,7 +32,7 @@
   <div class="row">
         <div class="col-md-12">
               <h4>Applicant Information</h4>
-              <h5>Basic information</h5>  
+              <h5>Basic information</h5>
         </div>
   </div>
   <div class="row">
@@ -169,12 +169,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-8">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Sign your name here
-          </button>
-        </div>
+      <!-- Button trigger modal
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Sign your name here
+      </button>-->
+        <div class="col-sm-8">{{signature-widget id="signature"}}</div>
         <div class="col-sm-4">{{mdl-input id="signatureDate" label="Date" }}</div>
     </div>
 </div>
