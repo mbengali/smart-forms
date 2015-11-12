@@ -1,0 +1,175 @@
+<div class="container container-fluid container-form">
+  <div class="row">
+        <div class="col-md-12">
+              <h3 class="document-title">Rental Application </h3>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        Thank you for downloading the Zillow Rental Application. Before you save or print this
+        application:
+      </p>
+      <ul>
+        <li>The cover sheet is for landlord use and can be removed when sent to renters.</li>
+        <li>Have each adult applicant (18 or older) fill out a separate application.</li>
+        <li>This application can be emailed and completed on the computer.</li>
+        <li>Need to add more questions? Edit the “Additional questions” section on page two to
+            personalize the application. Make sure you save any changes before sending.</li>
+      </ul>
+      <p>
+        For more tools and checklists, be sure to visit the resources center.
+      </p>
+      <p class="strong">
+        Disclaimer: This is a general rental application provided for informational purposes only.
+              Zillow Group, Inc. does not make any guarantees as to the sufficiency of the questions
+              included in this rental application or their compliance with applicable laws. This resource is
+              not a substitute for the advice or services of an attorney; you should not rely on this resource
+              for any purpose without consultation with a licensed attorney in your jurisdiction.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-md-12">
+              <h4>Applicant Information</h4>
+              <h5>Basic information</h5>  
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="firstName" label="First name" }}</div>
+    <div class="col-sm-4">{{mdl-input id="MiddleName" label="Middle name" }}</div>
+    <div class="col-sm-4">{{mdl-input id="lastName" label="Last name" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="birthDate" label="Birth date" }}</div>
+    <div class="col-sm-4">{{mdl-input id="socialSecurity" label="Social security #" }}</div>
+    <div class="col-sm-4">{{mdl-input id="emailAddress" label="Email address" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="homePhone" label="Home phone" }}</div>
+    <div class="col-sm-4">{{mdl-input id="cellPhone" label="Cell phone" }}</div>
+    <div class="col-sm-4">{{mdl-input id="driversLicense" label="Driver's license" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <h4>Rental History</h4>
+        <h5>Current residence </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="address1" label="Address" }}</div>
+    <div class="col-sm-4">{{mdl-input id="city1" label="City" }}</div>
+    <div class="col-sm-4">{{mdl-input id="state1" label="State" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="zip1" label="ZIP" }}</div>
+    <div class="col-sm-4">{{mdl-input id="rent" label="Monthly rent" }}</div>
+    <div class="col-sm-4">{{mdl-input id="residencyDates" label="Dates of residency (From/To)" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">{{mdl-input id="reasonMoving" label="Reason for moving" }}</div>
+    <div class="col-sm-4">{{mdl-input id="ownerName" label="Owner/Manager’s name" }}</div>
+    <div class="col-sm-4">{{mdl-input id="ownerPhoneNumber" label="Phone number" }}</div>
+  </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+             <h4> Employment history </h4>
+             <h5> Current employer </h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">{{mdl-input id="companyName" label="Company name" }}</div>
+        <div class="col-sm-4">{{mdl-input id="employerPhone" label="Employer's phone" }}</div>
+        <div class="col-sm-4">{{mdl-input id="monthlyPay" label="Monthly pay" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">{{mdl-input id="occupation" label="Occupation" }}</div>
+        <div class="col-sm-4">{{mdl-input id="dateOfEmployment" label="Date of employment" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">{{mdl-input id="employerAddress" label="Employer's address" }}</div>
+        <div class="col-sm-4">{{mdl-input id="nameOfSupervisor" label="Name of supervisor" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+             <h4> General Information </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Have you ever been late or deliquent on rent?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkLateYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkLateNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Have you ever been evicted?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkEvkYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkEvkNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Have you ever filed for bankruptcy?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkBankYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkBankNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Have you ever been party to a lawsuit?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkLawYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkLawNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Have you ever been convicted of a felony?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkFelYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkFelNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{mdl-textarea id="reasonFelo" label="If yes to any of the above, please explain why." }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Do you smoke?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkSmokeYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkSmokeNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">Do you have any pets?</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkPetsYes" label="Yes" }}</div>
+        <div class="col-sm-3">{{mdl-checkbox id="chkPetsNo" label="No" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{mdl-textarea id="explainPets" label="If yes, list type, breed, weight, and age." rows="1" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{mdl-textarea id="explainMovingReason" label="If yes, list type, breed, weight, and age." rows="1" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{mdl-textarea id="explainBckCheck" label="Is there anything negative in your credit or background check you want to comment on?"}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">Rental application fee:</div>
+        <div class="col-sm-3">{{mdl-input id="appFee" label="$" }}</div>
+        <div class="col-sm-6">{{mdl-checkbox id="chkPaid" label="Paid" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+             <h4> Additional questions: </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">{{mdl-textarea id="addQuestions" label="Additional questions" rows="3" }}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+             <h4> Agreement & Authorization </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            By signing this application, I verify that the statements in this application are true and correct. I authorize the use of the
+            information and contacts provided to complete a credit, reference, and/or background check. I understand that false or
+            lack of information may result in the rejection of this application.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">{{mdl-input id="signature" label="Signature of applicant" }}</div>
+        <div class="col-sm-4">{{mdl-input id="signatureDate" label="Date" }}</div>
+    </div>
+</div>

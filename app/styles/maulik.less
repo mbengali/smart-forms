@@ -1,35 +1,30 @@
-/* Bootstrap - Grid & Dependencies */
-@import "variables.less";
-@import "mixins.less";
-@import "normalize.less";
-@import "scaffolding.less";
-@import "grid.less";
-
-// mdl overrides
-.mdl-textfield {
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    padding: 14px 20px 6px;
-    margin-bottom: 10px;
-}
-
-.mdl-textfield__input {
-    border-bottom: none;
-}
-
-.mdl-textfield__label {
-    top: 15px;
-    padding-left: 20px;
-
-    &:after {
-        content: none;
-    }
-}
-
 // select2 ovverides
 .select2-container {
     width: 100%;
 }
 .select2-choice {
     width: 100%;
+}
+
+body {
+    background: @gray-dark;
+}
+
+.header {
+    img.logo {
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+    h4 {
+        position: absolute;
+        left: 100px;
+        top: 15px;
+        margin: 0;
+        margin-right: 40px;
+    }
+}
+
+.container-form {
+  background: url('../images/logo-watermark.png') top right no-repeat #fff;
 }
