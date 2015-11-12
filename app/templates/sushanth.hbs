@@ -1,62 +1,73 @@
 <!-- Simple Textfield -->
 <div class="container">
-  <div class="text-content">
-    <h3 class="document-title text-center">Rental Application: Cover Sheet </h3>
-    <div>
-        <div>
-          Thank you for downloading the Zillow Rental Application. Before you save or print this
-          application:
+  <div class="row">
+        <div class="col-md-12">
+              <h3 class="document-title text-center">Rental Application: Cover Sheet </h3>
         </div>
-        <ul>
-          <li>The cover sheet is for landlord use and can be removed when sent to renters.</li>
-          <li>Have each adult applicant (18 or older) fill out a separate application.</li>
-          <li>This application can be emailed and completed on the computer.</li>
-          <li>Need to add more questions? Edit the “Additional questions” section on page two to
-              personalize the application. Make sure you save any changes before sending.</li>
-        </ul>
-        <div>
-          For more tools and checklists, be sure to visit the resources center.
-        </div>
-        <strong>Disclaimer: This is a general rental application provided for informational purposes only.
-                Zillow Group, Inc. does not make any guarantees as to the sufficiency of the questions
-                included in this rental application or their compliance with applicable laws. This resource is
-                not a substitute for the advice or services of an attorney; you should not rely on this resource
-                for any purpose without consultation with a licensed attorney in your jurisdiction.
-        </strong>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        Thank you for downloading the Zillow Rental Application. Before you save or print this
+        application:
+      </div>
+      <ul>
+        <li>The cover sheet is for landlord use and can be removed when sent to renters.</li>
+        <li>Have each adult applicant (18 or older) fill out a separate application.</li>
+        <li>This application can be emailed and completed on the computer.</li>
+        <li>Need to add more questions? Edit the “Additional questions” section on page two to
+            personalize the application. Make sure you save any changes before sending.</li>
+      </ul>
+      <div>
+        For more tools and checklists, be sure to visit the resources center.
+      </div>
+      <strong>Disclaimer: This is a general rental application provided for informational purposes only.
+              Zillow Group, Inc. does not make any guarantees as to the sufficiency of the questions
+              included in this rental application or their compliance with applicable laws. This resource is
+              not a substitute for the advice or services of an attorney; you should not rely on this resource
+              for any purpose without consultation with a licensed attorney in your jurisdiction.
+      </strong>
     </div>
   </div>
-  <form action="#">
-      <h4 class="col-md-12"> Applicant Information </h4>
-      {{input-text feildName="firstName" placeHolder="First Name"}}
-      {{input-text feildName="MiddleName" placeHolder="Middle Name"}}
-      {{input-text feildName="lastName" placeHolder="Last Name"}}
-      {{input-text feildName="birthDate" placeHolder="Birth date"}}
-      {{input-text feildName="socialSecurity" placeHolder="Social security #"}}
-      {{input-text feildName="emailAddress" placeHolder="Email address"}}
-      {{input-text feildName="homePhone" placeHolder="Home phone"}}
-      {{input-text feildName="cellPhone" placeHolder="Cell phone"}}
-      {{input-text feildName="driversLicense" placeHolder="Driver's license"}}
-
-      <h4 class="col-md-12"> Rental History </h4>
-      <h5 class="col-md-12"> Current residence </h5>
-      {{input-text feildName="address1" placeHolder="Address"}}
-      {{input-text feildName="city1" placeHolder="City"}}
-      {{input-text feildName="state1" placeHolder="State"}}
-      {{input-text feildName="zip1" placeHolder="ZIP"}}
-      {{input-text feildName="rent" placeHolder="Monthly rent"}}
-      {{input-text feildName="residencyDates" placeHolder="Dates of residency (From/To)"}}
-      {{input-text feildName="reasonMoving" placeHolder="Reason for moving"}}
-      {{input-text feildName="ownerName" placeHolder="Owner/Manager’s name"}}
-      {{input-text feildName="ownerPhoneNumber" placeHolder="Phone number"}}
-
-      <h4 class="col-md-12"> Employment history</h4>
-      <h5 class="col-md-12"> Current employer </h5>
-      {{input-text feildName="currentEmployer" placeHolder="Current employer"}}
-      {{input-text feildName="occupation" placeHolder="Occupation"}}
-      {{input-text feildName="empAddress" placeHolder="Employer address"}}
-      {{input-text feildName="empPhone" placeHolder="Employer's phone"}}
-      {{input-text feildName="empDates" placeHolder="Dates of employment"}}
-      {{input-text feildName="supervisorName" placeHolder="Name of supervisor"}}
-      {{input-text feildName="monthlyPay" placeHolder="Monthly pay"}}
-  </form>
+  <div class="row">
+        <div class="col-md-12">
+              <h4>Applicant Information</h4>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="firstName" label="First name" }}</div>
+    <div class="col-md-4">{{mdl-input id="MiddleName" label="Middle name" }}</div>
+    <div class="col-md-4">{{mdl-input id="lastName" label="Last name" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="birthDate" label="Birth date" }}</div>
+    <div class="col-md-4">{{mdl-input id="socialSecurity" label="Social security #" }}</div>
+    <div class="col-md-4">{{mdl-input id="emailAddress" label="Email address" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="homePhone" label="Home phone" }}</div>
+    <div class="col-md-4">{{mdl-input id="cellPhone" label="Cell phone" }}</div>
+    <div class="col-md-4">{{mdl-input id="driversLicense" label="Driver's license" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <h4>Rental History</h4>
+        <h5> Current residence </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="address1" label="Address" }}</div>
+    <div class="col-md-4">{{mdl-input id="city1" label="City" }}</div>
+    <div class="col-md-4">{{mdl-input id="state1" label="State" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="zip1" label="ZIP" }}</div>
+    <div class="col-md-4">{{mdl-input id="rent" label="Monthly rent" }}</div>
+    <div class="col-md-4">{{mdl-input id="residencyDates" label="Dates of residency (From/To)" }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">{{mdl-input id="reasonMoving" label="Reason for moving" }}</div>
+    <div class="col-md-4">{{mdl-input id="ownerName" label="Owner/Manager’s name" }}</div>
+    <div class="col-md-4">{{mdl-input id="ownerPhoneNumber" label="Phone number" }}</div>
+  </div>
 </div>

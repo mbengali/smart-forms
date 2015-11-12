@@ -1,0 +1,40 @@
+<div class="container">
+  {{#if model.title}}
+    <div class="row">
+          <div class="col-md-12">
+                <h3 class="document-title text-center">{{model.title}} </h3>
+          </div>
+    </div>
+  {{/if}}
+  {{#each model.sections as |section|}}
+     {{#if section.title}}
+        <div class="row">
+              <div class="col-md-12">
+                    <h4 class="text-center">{{section.title}}</h4>
+              </div>
+        </div>
+      {{/if}}
+      {{#if section.sub-title}}
+        <div class="row">
+          <div class="col-md-12">
+              <h4>{{section.sub-title}}</h4>
+          </div>
+        </div>
+      {{/if}}
+      {{#if section.description}}
+      <div class="row">
+        <div class="col-md-12">
+            <h5>{{section.description}}</h5>
+        </div>
+      </div>
+      {{/if}}
+      {{#if section.data}}
+        {{section.data}}
+      {{/if}}
+      {{#if section.fields}}
+        {{#each section.fields as |field|}}
+          <div class="col-md-4">{{mdl-input id=field.id label=field.label }}</div>
+        {{/each}}
+      {{/if}}
+  {{/each}}
+</div>

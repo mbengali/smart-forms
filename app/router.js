@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('init-app');
+  this.route('forms');
 });
 
 export default Router;
