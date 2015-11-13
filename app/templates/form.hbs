@@ -30,6 +30,20 @@
     </div>
   </div>
 
+  {{#each model.sections as |section|}}
+    <div class="row">
+        <div class="col-md-12">
+              <h4><a name="info">{{section.title}}</a></h4>
+              <h5>{{section.subtitle}}</h5>
+        </div>
+    </div>
+    <div class="row">
+      {{#each section.fields as |field|}}
+        <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
+      {{/each}}
+    </div>
+  {{/each}}
+
   <div class="row">
         <div class="col-md-12">
               <h4><a name="info">Applicant Information</a></h4>

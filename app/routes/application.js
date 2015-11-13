@@ -1,55 +1,62 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  	model: function() {
-    	/*return this.store.push({
+	beforeModel: function() {
+		this.store.pushPayload({
 			form: {
 				id: 1,
-				title: 'Rental Application',
+				title: 'Rental Application'
 			},
 			sections: [{
-				form_id: 1,
+				form: 1,
 				id: 1,
 				title: 'Applicant Information',
 				subtitle: 'Basic information',
 			}],
 			fields: [{
-				section_id: 1,
+				section: 1,
 				id: 'firstName',
 				label: 'First Name'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'middleName',
 				label: 'Middle Name'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'lastName',
 				label: 'Last Name'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'birthDate',
 				label: 'Birth Date'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'socialNumber',
 				label: 'Social security #'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'primaryEmailAddress',
 				label: 'Email Address'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'homePhone',
 				label: 'Home Phone'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'cellPhone',
 				label: 'Cell Phone'
 			}, {
-				section_id: 1,
+				section: 1,
 				id: 'driversLicense',
 				label: 'Drivers License'
 			}]
-		});*/
+		});
+	},
+  	model: function() {
+  		return Ember.RSVP.hash({
+	      form: this.store.peekRecord('form', 1),
+	      sections: this.store.peekAll('section'),
+	      fields: this.store.peekAll('field')
+	    });
   	}
 });
