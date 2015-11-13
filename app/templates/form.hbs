@@ -1,7 +1,7 @@
 <div class="container container-fluid container-form">
   <div class="row">
         <div class="col-md-12">
-              <h3 class="document-title">Rental Application </h3>
+              <h3 class="document-title">{{model.form.title}} </h3>
         </div>
   </div>
   <div class="row">
@@ -29,6 +29,20 @@
       </p>
     </div>
   </div>
+
+  {{#each model.sections as |section|}}
+    <div class="row">
+        <div class="col-md-12">
+              <h4><a name="info">{{section.title}}</a></h4>
+              <h5>{{section.subtitle}}</h5>
+        </div>
+    </div>
+    <div class="row">
+      {{#each section.fields as |field|}}
+        <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
+      {{/each}}
+    </div>
+  {{/each}}
   <div class="row">
         <div class="col-md-12">
               <h4><a name="info">Applicant Information</a></h4>
@@ -197,7 +211,7 @@
             <span class="preview-initials col-sm-4">BTB</span>
         </div>
         <div class="row">
-            <div class="col-sm-12 gray">
+            <div class="col-sm-12 gray margin-bottom-20">
               By clicking adopt, I have read and understand dotloop's Terms of Use.
               I agree my electronic signature and initials shall have the same force and effect as my written signature or initial.
             </div>
