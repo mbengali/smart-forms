@@ -1,0 +1,47 @@
+// --- Modal overrides
+
+a {
+  &:hover {
+    text-decoration: none;
+    color: @dlDark;
+    cursor: pointer;
+  }
+}
+
+.modal {
+  .modal-header {
+    background: @dlBlue;
+    color: @white;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    padding: 25px 30px;
+  }
+  .close {
+    float: right;
+    width: 12px;
+    height: 12px;
+    font-weight: 900;
+    top: 25px;
+    right: 20px;
+    color: @white;
+  }
+
+  .modal-body {
+    padding: 20px 30px 40px 20px;;
+  }
+
+  .modal-footer {
+    padding-top: 20px;
+    border-top: none;
+  }
+}
+
+.signature-type-preview {
+    border-bottom: 1px solid @dlGrayLight;
+    margin-bottom: 50px;
+
+    > span {
+      font-family: 'Mr Dafoe', cursive;
+      font-size: 40px;
+    }
+}

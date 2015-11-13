@@ -4,5 +4,8 @@ export default MdlBase.extend({
   'buttonType': 'default',
   'btnClass' : function() {
     return this.get('buttonType') === 'signature' ? 'signature' : 'default';
-  }.property('buttonType')
+  }.property('buttonType'),
+  click: function() {
+
+  }
 });
