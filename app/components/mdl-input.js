@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import MdlBase from './mdl-base';
 
 export default MdlBase.extend({
@@ -9,9 +10,9 @@ export default MdlBase.extend({
        var $signatureValue = this.$('#modalSignature').val(),
            $intialValue = this.$('#modalInitial').val();
 
-       $('.preview-name').text($signatureValue);
-       $('.preview-initials').text($intialValue);
-       $('#hiddenInput').val($signatureValue);
+       Ember.$('.preview-name').text($signatureValue);
+       Ember.$('.preview-initials').text($intialValue);
+       Ember.$('#hiddenInput').val($signatureValue);
      }
    }
 });

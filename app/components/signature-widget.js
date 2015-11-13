@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import MdlBase from './mdl-base';
 
 export default MdlBase.extend({
@@ -20,6 +21,6 @@ export default MdlBase.extend({
   click : function() {
     /*this.set('hasBeenSigned', true);
     this.set('signTime', this.get('hasBeenSigned') ? Date.now() : ''); */
-    $('#myModal').modal();
+    Ember.$('#myModal').modal();
   }
 });
