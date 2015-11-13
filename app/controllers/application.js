@@ -2,6 +2,23 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
+    addFields: function() {
+      this.store.pushPayload({
+        fields: [{
+          section: 2,
+          id: '2_fullName_'  + Date.now(),
+          label: 'Full name'
+        }, {
+          section: 2,
+          id: '2_phoneNumber_4' + Date.now(),
+          label: 'Phone number'
+        }, {
+          section: 2,
+          id: '2_relationship_4' + Date.now(),
+          label: 'Relationship'
+        }]
+      });
+    },
     adoptSignature: function() {
       // Not sure what to do here
       var hiddenInputVal = Ember.$('#hiddenInput').val();

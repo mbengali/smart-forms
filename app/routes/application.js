@@ -11,44 +11,85 @@ export default Ember.Route.extend({
 				form: 1,
 				id: 1,
 				title: 'Applicant Information',
-				subtitle: 'Basic information',
+				subtitle: 'Basic information'
+			}, {
+				form: 1,
+				id: 2,
+				title: 'References',
+				isDynamic: true
 			}],
 			fields: [{
 				section: 1,
-				id: 'firstName',
+				id: '1_firstName',
 				label: 'First Name'
 			}, {
 				section: 1,
-				id: 'middleName',
+				id: '1_middleName',
 				label: 'Middle Name'
 			}, {
 				section: 1,
-				id: 'lastName',
+				id: '1_lastName',
 				label: 'Last Name'
 			}, {
 				section: 1,
-				id: 'birthDate',
+				id: '1_birthDate',
 				label: 'Birth Date'
 			}, {
 				section: 1,
-				id: 'socialNumber',
+				id: '1_socialNumber',
 				label: 'Social security #'
 			}, {
 				section: 1,
-				id: 'primaryEmailAddress',
+				id: '1_primaryEmailAddress',
 				label: 'Email Address'
 			}, {
 				section: 1,
-				id: 'homePhone',
+				id: '1_homePhone',
 				label: 'Home Phone'
 			}, {
 				section: 1,
-				id: 'cellPhone',
+				id: '1_cellPhone',
 				label: 'Cell Phone'
 			}, {
 				section: 1,
-				id: 'driversLicense',
+				id: '1_driversLicense',
 				label: 'Drivers License'
+			}, {
+				section: 2,
+				id: '2_fullName_1',
+				label: 'Full name'
+			}, {
+				section: 2,
+				id: '2_phoneNumber_1',
+				label: 'Phone number'
+			}, {
+				section: 2,
+				id: '2_relationship_1',
+				label: 'Relationship'
+			}, {
+				section: 2,
+				id: '2_fullName_2',
+				label: 'Full name'
+			}, {
+				section: 2,
+				id: '2_phoneNumber_2',
+				label: 'Phone number'
+			}, {
+				section: 2,
+				id: '2_relationship_2',
+				label: 'Relationship'
+			}, {
+				section: 2,
+				id: '2_fullName_3',
+				label: 'Full name'
+			}, {
+				section: 2,
+				id: '2_phoneNumber_3',
+				label: 'Phone number'
+			}, {
+				section: 2,
+				id: '2_relationship_3',
+				label: 'Relationship'
 			}]
 		});
 	},
