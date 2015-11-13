@@ -10,11 +10,11 @@ export default Ember.Controller.extend({
           label: 'Full name'
         }, {
           section: 2,
-          id: '2_phoneNumber_4' + Date.now(),
+          id: '2_phoneNumber_' + Date.now(),
           label: 'Phone number'
         }, {
           section: 2,
-          id: '2_relationship_4' + Date.now(),
+          id: '2_relationship_' + Date.now(),
           label: 'Relationship'
         }]
       });
