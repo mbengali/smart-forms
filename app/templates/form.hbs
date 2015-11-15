@@ -33,7 +33,7 @@
   {{#each model.sections as |section|}}
     <div class="row">
         <div class="col-md-12">
-              <h4><a name="info">{{section.title}}</a></h4>
+              <h4><a name="#{{section.name}}">{{section.title}}</a></h4>
               {{#if section.subtitle}}<h5>{{section.subtitle}}</h5>{{/if}}
         </div>
     </div>
@@ -41,74 +41,19 @@
       {{#each section.fields as |field|}}
         <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
       {{/each}}
-      {{#if section.isDynamic}}
-        <a {{action 'addFields'}}> Add</a>
+    </div>
+
+    {{#if section.isDynamic}}
+      <div class="row">
+        <div class="col-sm-4 mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect relative btn-action" {{action 'addFields' section}}>
+            <div class="add-icon"></div>
+            <div>
+              {{section.dynamicText}}
+            </div>
+        </div>
+      </div>
       {{/if}}
-    </div>
   {{/each}}
-
-  <div class="row">
-        <div class="col-md-12">
-              <h4><a name="info">Applicant Information</a></h4>
-              <h5>Basic information</h5>
-        </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="firstName" label="First name" }}</div>
-    <div class="col-sm-4">{{mdl-input id="MiddleName" label="Middle name" }}</div>
-    <div class="col-sm-4">{{mdl-input id="lastName" label="Last name" }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="birthDate" label="Birth date" }}</div>
-    <div class="col-sm-4">{{mdl-input id="socialSecurity" label="Social security #" }}</div>
-    <div class="col-sm-4">{{mdl-input id="emailAddress" label="Email address" }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="homePhone" label="Home phone" }}</div>
-    <div class="col-sm-4">{{mdl-input id="cellPhone" label="Cell phone" }}</div>
-    <div class="col-sm-4">{{mdl-input id="driversLicense" label="Driver's license" }}</div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-        <h4><a name="rental">Rental History</a></h4>
-        <h5>Current residence </h5>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="address1" label="Address" }}</div>
-    <div class="col-sm-4">{{mdl-input id="city1" label="City" }}</div>
-    <div class="col-sm-4">{{mdl-input id="state1" label="State" }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="zip1" label="ZIP" }}</div>
-    <div class="col-sm-4">{{mdl-input id="rent" label="Monthly rent" }}</div>
-    <div class="col-sm-4">{{mdl-input id="residencyDates" label="Dates of residency (From/To)" }}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">{{mdl-input id="reasonMoving" label="Reason for moving" }}</div>
-    <div class="col-sm-4">{{mdl-input id="ownerName" label="Owner/Manager’s name" }}</div>
-    <div class="col-sm-4">{{mdl-input id="ownerPhoneNumber" label="Phone number" }}</div>
-  </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-             <h4> <a name="employment">Employment history</a> </h4>
-             <h5> Current employer </h5>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">{{mdl-input id="companyName" label="Company name" }}</div>
-        <div class="col-sm-4">{{mdl-input id="employerPhone" label="Employer's phone" }}</div>
-        <div class="col-sm-4">{{mdl-input id="monthlyPay" label="Monthly pay" }}</div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">{{mdl-input id="occupation" label="Occupation" }}</div>
-        <div class="col-sm-4">{{mdl-input id="dateOfEmployment" label="Date of employment" }}</div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">{{mdl-input id="employerAddress" label="Employer's address" }}</div>
-        <div class="col-sm-4">{{mdl-input id="nameOfSupervisor" label="Name of supervisor" }}</div>
-    </div>
     <div class="row">
         <div class="col-sm-12">
              <h4><a name="gInfo">General Information</a></h4>
@@ -151,9 +96,6 @@
         <div class="col-sm-6">Do you have any pets?</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkPetsYes" label="Yes" }}</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkPetsNo" label="No" }}</div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">{{mdl-textarea id="explainPets" label="If yes, list type, breed, weight, and age." rows="1" }}</div>
     </div>
     <div class="row">
         <div class="col-sm-12">{{mdl-textarea id="explainMovingReason" label="If yes, list type, breed, weight, and age." rows="1" }}</div>

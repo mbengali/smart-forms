@@ -5,5 +5,7 @@ export default DS.Model.extend({
     subtitle: DS.attr('string'),
     isDynamic: DS.attr('boolean'),
     form: DS.belongsTo('form', { inverse : 'sections' }),
-    fields: DS.hasMany('field', { inverse : 'section' })
+    fields: DS.hasMany('field', { inverse : 'section' }),
+    dynamicText: DS.attr('string'),
+    name: DS.attr('string')
 });
