@@ -31,10 +31,10 @@
   </div>
 
   {{#each model.sections as |section|}}
-    <div class="section">
+    <div class="section" id="{{section.name}}">
       <div class="row">
           <div class="col-md-12">
-                <h4><a name="#{{section.name}}">{{section.title}}</a></h4>
+                <h4>{{section.title}}</h4>
                 {{#if section.subtitle}}<h5>{{section.subtitle}}</h5>{{/if}}
           </div>
       </div>
@@ -51,7 +51,7 @@
       {{#if section.isDynamic}}
         <div class="row">
           <div class="col-sm-4 mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect relative btn-action" {{action 'addFields' section}}>
-              <div class="add-icon"></div>
+              {{!-- <div class="add-icon"></div> --}}
               <div class="btn-text">
                 {{section.dynamicText}}
               </div>
@@ -60,9 +60,10 @@
       {{/if}}
     </div>
   {{/each}}
+  <div class="section" id="ginfo">
     <div class="row">
         <div class="col-sm-12">
-             <h4><a name="gInfo">General Information</a></h4>
+             <h4>General Information</h4>
         </div>
     </div>
     <div class="row">
@@ -85,7 +86,7 @@
         <div class="col-sm-3">{{mdl-checkbox id="chkLawYes" label="Yes" }}</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkLawNo" label="No" }}</div>
     </div>
-    <div class="row">
+    <div class="row margin-bottom-20">
         <div class="col-sm-6">Have you ever been convicted of a felony?</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkFelYes" label="Yes" }}</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkFelNo" label="No" }}</div>
@@ -98,7 +99,7 @@
         <div class="col-sm-3">{{mdl-checkbox id="chkSmokeYes" label="Yes" }}</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkSmokeNo" label="No" }}</div>
     </div>
-    <div class="row">
+    <div class="row margin-bottom-20">
         <div class="col-sm-6">Do you have any pets?</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkPetsYes" label="Yes" }}</div>
         <div class="col-sm-3">{{mdl-checkbox id="chkPetsNo" label="No" }}</div>
@@ -122,27 +123,32 @@
     <div class="row">
         <div class="col-sm-12">{{mdl-textarea id="addQuestions" label="Additional questions" rows="3" }}</div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-             <h4><a name="agreement"> Agreement & Authorization</a></h4>
-        </div>
+
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            By signing this application, I verify that the statements in this application are true and correct. I authorize the use of the
-            information and contacts provided to complete a credit, reference, and/or background check. I understand that false or
-            lack of information may result in the rejection of this application.
-        </div>
+
+    <div class="section" id="agreement">
+      <div class="row">
+          <div class="col-sm-12">
+               <h4>Agreement & Authorization</h4>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12  margin-bottom-40">
+              By signing this application, I verify that the statements in this application are true and correct. I authorize the use of the
+              information and contacts provided to complete a credit, reference, and/or background check. I understand that false or
+              lack of information may result in the rejection of this application.
+          </div>
+      </div>
+      <div class="row">
+        <!-- Button trigger modal
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Sign your name here
+        </button>-->
+          <div class="col-sm-8">{{signature-widget id="signature" action="signDocument"}}</div>
+          <div class="col-sm-4">{{mdl-input id="signatureDate" label="Date" }}</div>
+      </div>
+      <input type="hidden" id="hiddenInput" value="Rachel Renter"/>
     </div>
-    <div class="row">
-      <!-- Button trigger modal
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        Sign your name here
-      </button>-->
-        <div class="col-sm-8">{{signature-widget id="signature" action="signDocument"}}</div>
-        <div class="col-sm-4">{{mdl-input id="signatureDate" label="Date" }}</div>
-    </div>
-    <input type="hidden" id="hiddenInput" value="Betty the buyer"/>
 </div>
 
 <!-- Modal -->
