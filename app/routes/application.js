@@ -45,7 +45,7 @@ export default Ember.Route.extend({
 				title: 'References',
 				isDynamic: true,
 				name: 'references',
-				dynamicText: 'Add another field'
+				dynamicText: 'Add another reference'
 			}],
 			fields: [{
 				section: 1,

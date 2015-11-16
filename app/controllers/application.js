@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
       if(+section.get('id') === 1) {
         fieldData = [{
   				section: 1,
+  				subLabel: 'Additional info',
+          id: '1_addinfo' + Date.now()
+  			}, {
+  				section: 1,
   				id: '1_firstName' + Date.now(),
   				label: 'First Name'
   			}, {
@@ -45,6 +49,10 @@ export default Ember.Controller.extend({
   			}];
       } else if(+section.get('id') === 2) {
         fieldData = [{
+  				section: 2,
+  				subLabel: 'Prevoius residence',
+          id: '1_subLabel' + Date.now()
+  			}, {
   				section: 2,
   				id: '1_address' + Date.now(),
   				label: 'Address'
@@ -89,6 +97,10 @@ export default Ember.Controller.extend({
         }];
       } else if(+section.get('id') === 3) {
         fieldData = [{
+  				section: 3,
+  				subLabel: 'Previous employer',
+          id: '1_employerp' + Date.now()
+  			}, {
   				section: 3,
   				id: '1_cname'  + Date.now(),
   				label: 'Company Name'

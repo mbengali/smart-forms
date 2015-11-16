@@ -40,10 +40,14 @@
       </div>
       <div class="row">
         {{#each section.fields as |field|}}
-          {{#if field.multiline}}
-            <div class="col-sm-12">{{mdl-textarea id=field.id label=field.label rows=field.rows}}</div>
-            {{else}}
-            <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
+          {{#if field.subLabel}}
+            <h5 class="col-sm-12">{{field.subLabel}}</h5>
+          {{else}}
+            {{#if field.multiline}}
+              <div class="col-sm-12">{{mdl-textarea id=field.id label=field.label rows=field.rows}}</div>
+              {{else}}
+              <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
+            {{/if}}
           {{/if}}
         {{/each}}
       </div>
@@ -111,9 +115,9 @@
         <div class="col-sm-12">{{mdl-textarea id="explainBckCheck" label="Is there anything negative in your credit or background check you want to comment on?"}}</div>
     </div>
     <div class="row">
-        <div class="col-sm-3">Rental application fee:</div>
+        <div class="col-sm-3 margin-top-20">Rental application fee:</div>
         <div class="col-sm-3">{{mdl-input id="appFee" label="$" }}</div>
-        <div class="col-sm-6">{{mdl-checkbox id="chkPaid" label="Paid" }}</div>
+        <div class="col-sm-6 margin-top-20">{{mdl-checkbox id="chkPaid" label="Paid" }}</div>
     </div>
     <div class="row">
         <div class="col-sm-12">

@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mdl-textfield {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     padding: 14px 20px 6px;
     margin-bottom: 10px;
 }
@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 .mdl-textfield__label {
     top: 15px;
     padding-left: 20px;
+    color: rgba(0, 0, 0, 0.5);
 
     &:after {
         content: none;
@@ -50,7 +51,15 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0;
 
    &.btn-action {
-     width: 31%;
+     background: linear-gradient(45deg, #F5F5F8, @white);
+   }
+
+   &:hover {
+     border: 1px solid rgba(0, 0, 0, 0.5);
+   }
+
+   &.btn-action {
+     width: 30.2%;
      margin-left: 15px;
 
      .add-icon {
