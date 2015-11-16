@@ -80,7 +80,13 @@ export default Ember.Controller.extend({
   				section: 2,
   				id: '1_dnumber' + Date.now(),
   				label: 'Phone Number'
-  			}];
+  			},  {
+          section: 2,
+          id: '1_reasonMoving' + Date.now(),
+          label: 'Why are you moving from the current residence?',
+          rows: 3,
+          multiline: true
+        }];
       } else if(+section.get('id') === 3) {
         fieldData = [{
   				section: 3,

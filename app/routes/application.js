@@ -119,6 +119,12 @@ export default Ember.Route.extend({
 				section: 2,
 				id: '1_dnumber',
 				label: 'Phone Number'
+			}, {
+				section: 2,
+				id: '1_reasonMoving' + Date.now(),
+				label: 'Why are you moving from the current residence?',
+				rows: 3,
+				multiline: true
 			},
 			{
 				section: 3,

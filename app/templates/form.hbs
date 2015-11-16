@@ -31,28 +31,34 @@
   </div>
 
   {{#each model.sections as |section|}}
-    <div class="row">
-        <div class="col-md-12">
-              <h4><a name="#{{section.name}}">{{section.title}}</a></h4>
-              {{#if section.subtitle}}<h5>{{section.subtitle}}</h5>{{/if}}
-        </div>
-    </div>
-    <div class="row">
-      {{#each section.fields as |field|}}
-        <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
-      {{/each}}
-    </div>
-
-    {{#if section.isDynamic}}
+    <div class="section">
       <div class="row">
-        <div class="col-sm-4 mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect relative btn-action" {{action 'addFields' section}}>
-            <div class="add-icon"></div>
-            <div>
-              {{section.dynamicText}}
-            </div>
-        </div>
+          <div class="col-md-12">
+                <h4><a name="#{{section.name}}">{{section.title}}</a></h4>
+                {{#if section.subtitle}}<h5>{{section.subtitle}}</h5>{{/if}}
+          </div>
       </div>
+      <div class="row">
+        {{#each section.fields as |field|}}
+          {{#if field.multiline}}
+            <div class="col-sm-12">{{mdl-textarea id=field.id label=field.label rows=field.rows}}</div>
+            {{else}}
+            <div class="col-sm-4">{{mdl-input id=field.id label=field.label }}</div>
+          {{/if}}
+        {{/each}}
+      </div>
+
+      {{#if section.isDynamic}}
+        <div class="row">
+          <div class="col-sm-4 mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect relative btn-action" {{action 'addFields' section}}>
+              <div class="add-icon"></div>
+              <div class="btn-text">
+                {{section.dynamicText}}
+              </div>
+          </div>
+        </div>
       {{/if}}
+    </div>
   {{/each}}
     <div class="row">
         <div class="col-sm-12">
