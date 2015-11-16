@@ -8,7 +8,7 @@ export default MdlBase.extend({
     return this.get('hasBeenSigned') ? className + ' signed' : className;
   }.property('hasBeenSigned'),
   label: function() {
-    return this.get('hasBeenSigned') ? 'Betty the renter' : 'Sign now';
+    return this.get('hasBeenSigned') ? 'Rachel Renter' : 'Sign now';
   }.property('hasBeenSigned'),
   signTime: function() {
     var today = new Date(),
